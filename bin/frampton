@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var Promise      = require('../lib/ext/promise');
+var TestCommand  = require('../lib/commands').TestCommand;
+var BuildCommand = require('../lib/commands').BuildCommand;
+
+var cliArgs = process.argv.slice(2);
+
+if (cliArgs.length > 1) {
+  console.log('too many arguments');
+} else if (cliArgs[0] === 'build') {
+  var build = new BuildCommand();
+  build.run();
+} else if (cliArgs[0] === 'test') {
+  var test = new TestCommand();
+  test.run();
+}

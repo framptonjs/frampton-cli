@@ -1,0 +1,32 @@
+{
+  "name": "frampton-cli",
+  "version": "0.0.1",
+  "description": "frampton cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/framptonjs/frampton-cli.git"
+  },
+  "preferGlobal": true,
+  "author": "Kevin Greene <hightimesteddy@gmail.com>",
+  "license": "ISC",
+  "bin": {
+    "frampton": "./bin/frampton"
+  },
+  "dependencies": {
+    "broccoli": "0.15.4",
+    "broccoli-filter": "0.1.12",
+    "broccoli-funnel": "0.2.2",
+    "broccoli-kitchen-sink-helpers": "0.2.6",
+    "broccoli-merge-trees": "0.2.1",
+    "broccoli-unwatched-tree": "0.1.1",
+    "broccoli-writer": "0.1.1",
+    "quick-temp": "^0.1.2",
+    "rsvp": "^3.0.17",
+    "testem": "^0.8.3",
+    "wrench": "^1.5.8"
+  }
+}
