@@ -20,6 +20,7 @@
     "rsvp": "3.2.1",
     "testem": "1.10.2",
     "fs-extra": "0.30.0",
-    "quick-temp": "0.1.5"
+    "quick-temp": "0.1.5",
+    "qunitjs": "2.0.1"
   }
 }

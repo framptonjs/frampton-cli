@@ -7,9 +7,6 @@ const GenerateCommand = require('../lib/commands').GenerateCommand;
 const cliArgs = process.argv.slice(2);
 const command = cliArgs[0];
 
-console.log('dir: ' + __dirname);
-console.log('cwd: ' + process.cwd());
-
 switch(command) {
 
   case 'build':
