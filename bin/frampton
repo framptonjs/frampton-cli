@@ -1,29 +1,38 @@
 #!/usr/bin/env node
 
+const parseOptions = require('../lib/utils/parse_options');
+
 const TestCommand = require('../lib/commands').TestCommand;
 const BuildCommand = require('../lib/commands').BuildCommand;
 const GenerateCommand = require('../lib/commands').GenerateCommand;
+const ReleaseCommand = require('../lib/commands').ReleaseCommand;
 
 const cliArgs = process.argv.slice(2);
 const command = cliArgs[0];
+const opts = parseOptions(cliArgs.slice(1));
 
 switch(command) {
 
+  case 'release':
+    const release = new ReleaseCommand();
+    release.run(opts);
+    break;
+
   case 'build':
     const build = new BuildCommand();
-    build.run();
+    build.run(opts);
     break;
 
   case 'test':
     const test = new TestCommand();
-    test.run().then((code) => {
+    test.run(opts).then((code) => {
       process.exit(code);
     });
     break;
 
   case 'generate':
     const generate = new GenerateCommand();
-    generate.run();
+    generate.run(opts);
     break;
 
   default:
