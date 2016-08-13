@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const parseOptions = require('../lib/utils/parse_options');
+const validCommand = require('../lib/utils/valid_command');
 
 const TestCommand = require('../lib/commands').TestCommand;
 const BuildCommand = require('../lib/commands').BuildCommand;
@@ -8,7 +9,7 @@ const GenerateCommand = require('../lib/commands').GenerateCommand;
 const ReleaseCommand = require('../lib/commands').ReleaseCommand;
 
 const cliArgs = process.argv.slice(2);
-const command = cliArgs[0];
+const command = validCommand(cliArgs[0]);
 const opts = parseOptions(cliArgs.slice(1));
 
 switch(command) {
