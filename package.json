@@ -1,6 +1,6 @@
 {
   "name": "frampton-cli",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "frampton cli",
   "main": "index.js",
   "scripts": {
